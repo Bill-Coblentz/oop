@@ -1,6 +1,9 @@
 #from sys import last_traceback
 
 
+from unicodedata import name
+
+
 class Ninja:
     def __init__(self, first_name , last_name , treats , pet_food , pet ):
         self.first_name = first_name
@@ -26,6 +29,7 @@ class Pet(Ninja):
     def __init__(self, name, tricks):
         self.name = name
         self.tricks = tricks
+        self.pet = Ninja(feed(), walk(), bathe())
 
     def sleep(self, sleep_bonus):
         print("increases the pets energy by " + sleep_bonus)
